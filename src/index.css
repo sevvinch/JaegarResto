@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+body {
+  background: #252836;
+}
+.categoryFilter{
+    /* border-bottom: 4px solid #c ; */
+
+  &:hover{
+      color: #EA7C69;
+    border-bottom: 2px solid #EA7C69;
+    button{
+      color:#EA7C69
+    };
+  }
+}
+.cartSroll::-webkit-scrollbar{
+display: none;
+}
