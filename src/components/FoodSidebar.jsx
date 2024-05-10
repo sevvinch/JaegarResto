@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { IoMdClose } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
 import ItemCard from "./FoodAddDel";
 import { useSelector } from "react-redux";
@@ -25,11 +24,7 @@ const Cart = () => {
          transition-all duration-500 z-50`}
       >
         <div className="flex justify-between items-center my-3">
-          <span className="text-xl font-bold text-[#FFFFFF]">Orders #34562</span>
-          <IoMdClose
-            onClick={() => setActiveCart(!activeCart)}
-            className="border-2 border-gray-600 text-gray-600 font-bold  p-1 text-xl  rounded-md hover:text-red-300 hover:border-red-300 cursor-pointer"
-          />
+          <span className="text-xl font-bold text-[#FFFFFF] mb-3">Orders #34562</span>
         </div>
 
         {cartItems.length > 0 ? (
@@ -46,22 +41,20 @@ const Cart = () => {
             );
           })
         ) : (
-          <h2 className="text-center text-xl font-bold text-gray-800">
+          <h2 className="text-center text-xl font-bold text-white">
             Your cart is empty
           </h2>
         )}
 
         <div className="absolute bottom-0 ">
           <h3 className="font-semibold text-[#ABBBC2]">Discount : {totalQty}</h3>
-          <h3 className="font-semibold text-[#ABBBC2]">
+          <h3 className="font-semibold text-[#ABBBC2] mb-2">
             Sub total : {totalPrice}
           </h3>
-          
-          <hr className="w-[90vw] lg:w-[18vw] my-2" />
 
           <button
             onClick={() => navigate("/success")}
-            className="bg-red-300 font-bold px-3 text-white py-2 rounded-lg w-[90vw] lg:w-[18vw] mb-5"
+            className="bg-[#EA7C69] font-bold px-3 text-white py-2 rounded-lg w-[90vw] lg:w-[18vw] mb-5 ml-[30px]"
           >
             Continue to Payment
           </button>

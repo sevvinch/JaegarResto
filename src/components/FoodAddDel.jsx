@@ -1,15 +1,11 @@
 import React from "react";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import {
   removeFromCart,
-  incrementQty,
-  decrementQty,
 } from "../redux/slices/CartSlice";
-// import { toast } from "react-hot-toast"; 
 
-const ItemCard = ({ id, name, qty, price, img }) => {
+const FoodItem = ({ id, name, qty, price, img }) => {
   const dispatch = useDispatch();
 
   return (
@@ -17,34 +13,26 @@ const ItemCard = ({ id, name, qty, price, img }) => {
       <MdDelete
         onClick={() => {
           dispatch(removeFromCart({ id, img, name, price, qty }));
-        
         }}
-        className="absolute right-7 text-gray-600 cursor-pointer"
+        className="absolute right-10 text-gray-600 cursor-pointer "
       />
-      <img src={img} alt="" className="w-[50px] h-[50px] " />
-      <div className="leading-5">
-        <h2 className="font-bold text-[#ABBBC2]">{name}</h2>
+      <img src={img} alt={name} className="w-[50px] h-[50px] " />
+      <div className="leading-5 ">
+        <h2 className="text-white text-[16px] font-normal tracking-[0%] leading-[130%] mb-[4px] ">{name}</h2>
         <div className="flex justify-between ">
-          <span className="text-[#ABBBC2] font-bold">${price}</span>
+          <span className="text-[#ABBBC2] font-bold mb-[14px]">${price}</span>
           <div className="flex justify-center items-center gap-2 absolute right-7">
-            <AiOutlineMinus
-              onClick={() =>
-                qty > 1 ? dispatch(decrementQty({ id })) : (qty = 0)
-              }
-              className="border-2 border-gray-600 text-gray-600 hover:text-white hover:bg-green-500 hover:border-none rounded-md p-1 text-xl transition-all ease-linear cursor-pointer"
-            />
-            <span>{qty}</span>
-            <AiOutlinePlus
-              onClick={() =>
-                qty >= 1 ? dispatch(incrementQty({ id })) : (qty = 0)
-              }
-              className="border-2 border-gray-600 text-gray-600 hover:text-white hover:bg-green-500 hover:border-none rounded-md p-1 text-xl transition-all ease-linear cursor-pointer"
-            />
+            <span className="py-[13px] px-[16px] bg-[#2D303E] border border-[#2D303E] rounded-[8px] text-white text-[16px] font-normal tracking-[0%] leading-[140%] ">{qty}</span>
           </div>
         </div>
+        <input
+        type="text"
+        placeholder="Please, just little bit spicy only."
+        className="mt-2 p-[14px] pr-[50px]  border border-transparent rounded-[8px]  ml-[-50px]  text-sm  bg-[#2D303E] outline-none w-[300px] text-[#fff] "
+      />
       </div>
     </div>
   );
 };
 
-export default ItemCard;
+export default FoodItem;

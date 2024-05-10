@@ -22,7 +22,6 @@ const CategoryMenu = () => {
   const selectedCategory = useSelector((state) => state.category.category);
 
   return (
-    // h-[2px] bg-[#393C49] mt-[-2px] me-12 relative
     <div className="ml-6 "> 
       <div className="my-5 flex gap-3 overflow-x-scroll scroll-smooth lg:overflow-x-hidden ">
      

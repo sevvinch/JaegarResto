@@ -19,8 +19,8 @@ const Sidebar = () => {
                     <img src={Logo} alt="" className='py-[10px] w-[96px] h-[96px]' />
                 </NavLink>
             </li>
-            <li className="my-[15px] pl-[30px] text-[#EA7C69] p-6 hover:bg-[#EA7C69] hover:text-white rounded-[8px] transition duration-300">
-                <NavLink className="">
+            <li className="my-[15px] pl-[30px] text-white p-6 bg-[#EA7C69] hover:text-white rounded-[8px] transition duration-300">
+                 <NavLink to="/home" activeClassName="active">
                     <GoHome className='w-[30px] h-[30px] '/>
                 </NavLink>
             </li>

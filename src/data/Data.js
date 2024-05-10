@@ -151,21 +151,19 @@ const FoodData = [
   },
   {
     id: 19,
-    img: "https://w7.pngwing.com/pngs/356/675/png-transparent-falafel-lebanese-cuisine-take-out-mediterranean-cuisine-hummus-bed-miscellaneous-furniture-food-thumbnail.png",
+    img: cardImg6,
     name: "Hummus and Veggie Platter",
     price: 90,
     desc: "Relish the smooth and flavorful hummus accompanied by a variety of fresh vegetable sticks and pita bread. A nutritious and satisfying option for a light and refreshing snack.",
     category: "Hot Dishes",
-    rating: 4.4,
   },
   {
     id: 20,
-    img: "https://w7.pngwing.com/pngs/435/847/png-transparent-pincho-canape-skewer-fruit-others-thumbnail.png",
+    img: cardImg6,
     name: "Fruit Skewers",
     price: 70,
     desc: "Indulge in a colorful assortment of fruit skewers featuring juicy chunks of melon, berries, pineapple, and more. A sweet and refreshing snack that's both delicious and visually appealing.",
     category: "Snacks",
-    rating: 4.8,
   },
 ];
 export default FoodData;
